@@ -1,7 +1,7 @@
 use std::ffi::CStr;
 use crate::util;
 
-const PTR_TO_STRING_ANSI: &str = "48 85 C9 75 ?? 33 C0 C3 E9 ?? ?? ?? ?? CC CC CC 48 83 EC ??";
+const PTR_TO_STRING_ANSI: &str = "48 85 C9 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? CC CC CC 48 83 EC ?? 48 85 C9 74 ?? 48 83 C4 ??";
 type MarshalPtrToStringAnsi = unsafe extern "fastcall" fn(*const u8) -> *const u8;
 static mut PTR_TO_STRING_ANSI_ADDR: Option<usize> = None;
 
